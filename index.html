@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Recitation Helper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="articles.js"></script>
+    <style>
+        .paragraph-container {
+            transition: all 0.3s ease;
+        }
+        .toggle-btn {
+            transition: background-color 0.2s ease;
+        }
+        .toggle-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Sample data structure (would be in a separate articles.js file)
+        // const articlesData = {
+        //     "article1": {
+        //         "title": "The Importance of Learning",
+        //         "content": [
+        //             {"chinese": "学习是人生中最重要的活动之一。", "english": "Learning is one of the most important activities in life."},
+        //             {"chinese": "它不仅帮助我们获得知识，还能培养我们的思维能力。", "english": "It not only helps us acquire knowledge but also develops our thinking abilities."},
+        //             {"chinese": "在当今快速变化的世界中，持续学习变得尤为重要。", "english": "In today's rapidly changing world, continuous learning has become particularly important."}
+        //         ]
+        //     },
+        //     "article2": {
+        //         "title": "The Benefits of Exercise",
+        //         "content": [
+        //             {"chinese": "定期锻炼对身体健康至关重要。", "english": "Regular exercise is crucial for physical health."},
+        //             {"chinese": "它可以改善心血管功能，增强肌肉力量。", "english": "It can improve cardiovascular function and strengthen muscles."},
+        //             {"chinese": "锻炼还能释放内啡肽，帮助我们减轻压力。", "english": "Exercise also releases endorphins, helping us reduce stress."}
+        //         ]
+        //     }
+        // };
+
+        const articlesData = articles;
+
+        function ArticleReciter() {
+            const [selectedArticle, setSelectedArticle] = useState('article1');
+            const [showAllEnglish, setShowAllEnglish] = useState(true);
+            const [paragraphVisibility, setParagraphVisibility] = useState([]);
+
+            useEffect(() => {
+                // Initialize visibility array based on current article
+                if (articlesData[selectedArticle]) {
+                    setParagraphVisibility(
+                        new Array(articlesData[selectedArticle].content.length).fill(true)
+                    );
+                }
+            }, [selectedArticle]);
+
+            const toggleEnglishVisibility = (index) => {
+                const newVisibility = [...paragraphVisibility];
+                newVisibility[index] = !newVisibility[index];
+                setParagraphVisibility(newVisibility);
+            };
+
+            const toggleAllEnglish = () => {
+                setShowAllEnglish(!showAllEnglish);
+                setParagraphVisibility(
+                    new Array(articlesData[selectedArticle].content.length).fill(!showAllEnglish)
+                );
+            };
+
+            return (
+                <div className="container mx-auto px-4 py-8 max-w-4xl">
+                    <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Article Recitation Helper</h1>
+                    
+                    <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
+                        <div className="w-full sm:w-auto">
+                            <label htmlFor="article-select" className="block text-sm font-medium text-gray-700 mb-1">
+                                Select Article:
+                            </label>
+                            <select
+                                id="article-select"
+                                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                                value={selectedArticle}
+                                onChange={(e) => setSelectedArticle(e.target.value)}
+                            >
+                                {Object.keys(articlesData).map((key) => (
+                                    <option key={key} value={key}>
+                                        {articlesData[key].title}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        
+                        <div className="flex gap-2 w-full sm:w-auto">
+                            <button
+                                onClick={toggleAllEnglish}
+                                className={`px-4 py-2 rounded-md font-medium ${showAllEnglish ? 'bg-green-500 hover:bg-green-600' : 'bg-gray-500 hover:bg-gray-600'} text-white`}
+                            >
+                                {showAllEnglish ? 'Hide All English' : 'Show All English'}
+                            </button>
+                        </div>
+                    </div>
+
+                    {articlesData[selectedArticle] && (
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                                {articlesData[selectedArticle].title}
+                            </h2>
+                            
+                            <div className="space-y-6">
+                                {articlesData[selectedArticle].content.map((paragraph, index) => (
+                                    <div key={index} className="paragraph-container">
+                                        <div className="bg-blue-50 p-4 rounded-lg mb-2">
+                                            <p className="text-gray-800">{paragraph.chinese}</p>
+                                        </div>
+                                        {paragraphVisibility[index] ? (
+                                            <div className="bg-gray-50 p-4 rounded-lg relative">
+                                                <p className="text-gray-800 font-medium">{paragraph.english}</p>
+                                                <button
+                                                    onClick={() => toggleEnglishVisibility(index)}
+                                                    className="toggle-btn absolute -top-2 -right-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-md"
+                                                    title="Hide English"
+                                                >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <button
+                                                onClick={() => toggleEnglishVisibility(index)}
+                                                className="toggle-btn w-full bg-gray-100 hover:bg-gray-200 p-2 rounded-lg text-gray-500 flex items-center justify-center"
+                                                title="Show English"
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                                </svg>
+                                                Show English
+                                            </button>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<ArticleReciter />, document.getElementById('root'));
+    </script>
+</body>
+</html>
