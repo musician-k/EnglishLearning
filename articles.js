@@ -53,7 +53,7 @@ const articles = {
                 "english": "None of this had even a hope of any practical application in my life. But ten years later, when we were designing the first Macintosh computer, it all came back to me. And we designed it all into the Mac. It was the first computer with beautiful typography. If I had never dropped in on that single course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts."
             },
             {
-                "chinese": "鉴于微软只知道抄袭苹果，估计所有个人电脑都不会有这些。如果我没有退学，没有旁听这门书法课，也许所有电脑都不会有如此美丽的印刷体。当然在大学的时候我不可能预见到它们之间的联系，但今天回首往事一切都非常明了",
+                "chinese": "鉴于微软只知道抄袭苹果，估计没有个人电脑会有这些。如果我没有退学，没有旁听这门书法课，也许个人电脑就不会有如此美丽的印刷体。当然在大学的时候我不可能预见到它们之间的联系，但在10年之后回首往事 一切都非常非常明了。",
                 "english": "And since Windows just copied the Mac, its likely that no personal computer would have them. If I had never dropped out, I would have never dropped in on this calligraphy class, and personal computers might not have the wonderful typography that they do. Of course it was impossible to connect the dots looking forward when I was in college. But it was very, very clear looking backwards ten years later."
             },
             {
@@ -65,11 +65,11 @@ const articles = {
                 "english": "[2] My second story is about love and loss."
             },
             {
-                "chinese": "我很幸运，在很早的时候就找到了喜欢做的事情。20 岁的时候沃茨和我在车库里面开创了苹果公司。我们努力地工作，用了仅仅 10 年时间，苹果就从两个穷小子发展成超过 4000 人价值 20 亿的公司。那个时候我们最棒的产品—— Macintosh 刚刚推出一年，而我刚刚 30 岁，这时我被解雇了。",
-                "english": "I was lucky. I found what I loved to do early in life. Woz and I started apple in my parents garage when I was 20. We worked hard, and in 10 years apple had grown from just the two of us in a garage into a billion company with over 4000 employees. We just released our finest creation - the Macintosh - a year earlier, and I had just turned 30."
+                "chinese": "我很幸运，我在人生很早的时候就找到了喜欢做的事情。在我20岁的时候，沃茨和我 在我父母在车库里面开创了苹果公司。我们努力地工作，用了仅仅 10 年时间，苹果就从车库里的两个穷小子发展成超过 4000 人价值 数十亿的公司。那个时候我们最棒的产品—— Macintosh 刚刚推出一年，而我刚刚 30 岁，这时我被解雇了。",
+                "english": "I was lucky. I found what I loved to do early in life. Woz and I started apple in my parents garage when I was 20. We worked hard, and in 10 years apple had grown from just the two of us in a garage into a billion company with over 4000 employees. We just released our finest creation - the Macintosh - a year earlier, and I had just turned 30 and then I got fired."
             },
             {
-                "chinese": "你怎么可能被自已创立的公司解雇呢？在苹果快速成长的时候，我们请了一个我当时认为很有才能的家伙，第一年一切都限顺利。但后来我们的看法发生了分歧，我们吵翻了。而这时董事会站在了他那一边，所以在三十岁的时候, 我被炒了。所以，而立之年，我在众目睽睽下被开除了。我整个成年生活的重心突然丢失了，这是个致命的打击。",
+                "chinese": "你怎么可能被自已创立的公司解雇呢？在苹果成长的时候，我们请了一个我当时认为很有才能的家伙和我一起运作公司，第一年一切都限顺利。但后来我们对未来的看法开始出现分歧，我们吵翻了。而这时董事会站在了他那一边。所以在30时我被开除了，而且是非常公开地开除了。我整个成年生活的重心突然丢失了，这是个致命的打击。",
                 "english": "How can you get fired from a company you started？ Well, as apple grew we hired someone who I thought was very talented to run the company with me, and for the first year or so things went well. But then our visions of the future began to diverge and eventually we had a falling out. When we did, our Board of Directors sided with him. So at 30 I was out. And very publicly out. What had been the focus of my entire adult life was gone, and it was devastating."
             },
             {
