@@ -81,19 +81,19 @@ const articles = {
                 "english": "I was a very public failure, and I even thought about running away from the valley. But something slowly began to dawn on me – I still loved what I did. The turn of events at apple had not changed that one bit. I had been rejected, but I was still in love. And so I decided to start over."
             },
             {
-                "chinese": "当时很难想象，事实上，离开苹果是我这辈子里发生的最好的事情。成功的沉重被重新出发的轻盈所代替，我不再执迷于任何事情，这让我变得自由，并进入了人生中最富创造动的时期。",
+                "chinese": "我当时没有意识到，但事实证明，离开苹果是我这辈子里发生的最好的事情。成功的沉重被重新出发的轻盈所代替，对一切都不再那么确定。这种自由感，让我进入了人生中最富创意的时期之一",
                 "english": "I didn't see it then, but it turned out that getting fired from apple was the best thing that could have ever happened to me. The heaviness of being successful was replaced by the lightness of being a beginner again, less sure about everything. It freed me to enter one of the most creative periods of my life."
             },
             {
-                "chinese": "在接下来的5年里， 我创立了一家名叫 NeXT 的公司和另一家名叫皮克斯的公司，与一位美丽的女人恋爱——她后来成为了我的妻子。皮克斯制作了世界上第一个全电脑制作的动画电影《玩具总动员》，如今已是世界上最知名的动画工作室。",
+                "chinese": "在接下来的5年里， 我创立了一家名叫 NeXT 的公司和另一家名叫皮克斯的公司，爱上了一位了不起的女人——她后来成为了我的妻子。皮克斯制作了世界上第一个全电脑制作的动画电影《玩具总动员》，如今已是世界上最知名的动画工作室。",
                 "english": "During the next five years, I started a company named NeXT, another company named Pixar, and fell in love with an amazing woman who would become my wife. Pixar went on to create the worlds first computer animated feature film, Toy Story, and is now the most successful animation studio in the world."
             },
             {
-                "chinese": "后来阴差阳错苹果收购NeXT，我重返苹果。而我们在NeXT开发的技术，对苹果的复兴起到了关键作用，Laurene也跟我也组建了幸福的家庭。",
+                "chinese": "在一次出人意料的事件转折中，苹果公司买下了 NeXT，我回到了苹果公司，我们在NeXT开发的技术成了是公司这次重新崛起的核心。我和劳伦娜(Laurene)也建立了美满的家庭。",
                 "english": "In a remarkable turn of events, apple bought NeXT, I returned to apple, and the technology we developed at NeXT is at the heart of apple's current renaissance. And Laurene and I have a wonderful family together."
             },
             {
-                "chinese": "我很确定，如果不被苹果开除，所有这一切都不会发生。良药苦口，但我想这正是我需要的。有时候生活会给你当头一棒，不要失去信仰。唯一支撑着我一路走来的是我爱我所做的事，你必须找到你的真爱，对工作如此对爱人亦然。工作将占据你生命中很大的部分，只有相信自己所做的是伟大的工作，你才能活得快乐。而伟大的工作就源自你的爱，如果你还没有找到，继续寻找不要停下脚步，全心全意的寻找，当你遇到它时你就会明白，就像那些美好的爱情，随着岁月的流逝愈加醇美。所以继续寻找不要停下脚步。",
+                "chinese": "我很确定，这一切都不会发生如果我没被苹果开除。这是一剂苦药，但我猜测病人需要它。有时候生活会给你当头一棒，不要失去信仰。我确信，唯一支撑着我一路走来的是我爱我所做的事，你必须找到你的真爱，对工作如此对爱人亦然。工作将占据你生活的很大一部分，而获得真正满足的唯一途径，就是做你认为伟大的工作。而做伟大工作的唯一途径，就是热爱你所做的事情。如果你还没有找到，继续寻找不要停下脚步，当全心全意寻找时，你在遇到它时你就会明白，就像那些美好的爱情，随着岁月的流逝愈加醇美。所以继续寻找直到你找到它，不要停下脚步。",
                 "english": "I'm pretty sure none of this would have happened if I hadn't been fired from apple. It was awful tasting medicine, but I guess the patient needed it. Sometimes life hits you in the head with a brick. Don't lose faith. I'm convinced that the only thing that kept me going was that I loved what I did. You've got to find what you love. And that is as true for your work as it is for your lovers. Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets better and better as the years roll on. So keep looking until you find it. Don't settle."
             },
             {
