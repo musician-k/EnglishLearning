@@ -101,11 +101,11 @@ const articles = {
                 "english": "[3] My third story is about death."
             },
             {
-                "chinese": "我17岁的时候读到过一句话:“如果你把每一天都当作是生命的最后一天，总有一天你会是对的。”这话给我留下了深刻的印象。在那之后的33年里，每天早晨我都对着镜子问自己：“如果今天是我生命中的最后一天我还会做我今天要做的这些事吗？”如果连续很多天答案都是“不”，我就知道需要改变了。",
-                "english": "When I was 17, I read a quote that went something like: \"If you live each day as if it was your last, someday you'll most certainly be right.\"It made an impression on me, and since then, for the past 33 years, I have looked in the mirror every morning and asked myself:\"If today were the last day of my life, would I want to do what I am about to do today？\"And whenever the answer has been\"No\" for too many days in a row, I know I need to change something."
+                "chinese": "我17岁的时候读到过这样一句话:“如果你把每一天都当作是生命的最后一天，总有一天你会是对的。” 这话给我留下了深刻的印象。在那之后，在过去的的33年里，每天早晨我都对着镜子问自己：“如果今天是我生命中的最后一天我还会想做我今天要做的这些事吗？” 每当答案连续很多天都是“不”的时候，我就知道需要改变了。",
+                "english": "When I was 17, I read a quote that went something like: \"If you live each day as if it was your last, someday you'll most certainly be right. \"It made an impression on me, and since then, for the past 33 years, I have looked in the mirror every morning and asked myself:\"If today were the last day of my life, would I want to do what I am about to do today？\"And whenever the answer has been\"No\" for too many days in a row, I know I need to change something."
             },
             {
-                "chinese": "记住自己终将会死去是我最重要的自我检验，并帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的期望、所有的荣耀、对失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西，时刻提醒自己将会死去，便可以帮助你避开担心失去身外之物的恐惧。你本就一无所有，没有理由不去追随你的内心。",
+                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的期望、所有的荣耀、对失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，可以帮助你避开担心失去身外之物的恐惧。你已经一无所有，没有理由不去追随你的内心。",
                 "english": "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything – all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
             },
             {
