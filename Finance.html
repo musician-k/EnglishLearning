@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            padding: 30px;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .input-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stock-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto auto;
+            gap: 15px;
+            align-items: end;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-size: 0.9rem;
+        }
+        
+        input, select {
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4facfe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(67, 233, 123, 0.3);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(250, 112, 154, 0.3);
+        }
+        
+        .btn-cash {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #2d3748;
+        }
+        
+        .btn-cash:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(168, 237, 234, 0.3);
+        }
+        
+        .stocks-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .stock-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto auto;
+            gap: 15px;
+            align-items: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #4facfe;
+        }
+        
+        .stock-item.stable {
+            border-left-color: #43e97b;
+        }
+        
+        .stock-item.advance {
+            border-left-color: #fa709a;
+        }
+        
+        .stock-item.cash {
+            border-left-color: #a8edea;
+        }
+        
+        .stock-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .stock-amount {
+            font-weight: 600;
+            color: #059669;
+        }
+        
+        .stock-type {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .stock-type.stable {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .stock-type.advance {
+            background: #fce7f3;
+            color: #9d174d;
+        }
+        
+        .stock-type.cash {
+            background: #e0f2fe;
+            color: #075985;
+        }
+        
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+            text-align: center;
+        }
+        
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .stock-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .stock-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        const FinanceTracker = () => {
+            const [stocks, setStocks] = useState([]);
+            const [newStock, setNewStock] = useState({ name: '', amount: '', type: 'stable' });
+            const [charts, setCharts] = useState({});
+
+            const chartRefs = {
+                typeDistribution: useRef(null),
+                stableDistribution: useRef(null),
+                advanceDistribution: useRef(null),
+                cashDistribution: useRef(null),
+                totalOverview: useRef(null)
+            };
+
+            useEffect(() => {
+                const savedStocks = localStorage.getItem('financeStocks');
+                if (savedStocks) {
+                    setStocks(JSON.parse(savedStocks));
+                }
+            }, []);
+
+            useEffect(() => {
+                localStorage.setItem('financeStocks', JSON.stringify(stocks));
+            }, [stocks]);
+
+            const handleInputChange = (field, value) => {
+                setNewStock(prev => ({
+                    ...prev,
+                    [field]: value
+                }));
+            };
+
+            const addStock = () => {
+                if (!newStock.name || !newStock.amount) {
+                    alert('Please fill in both name and amount fields');
+                    return;
+                }
+
+                const stock = {
+                    id: Date.now(),
+                    name: newStock.name,
+                    amount: parseFloat(newStock.amount),
+                    type: newStock.type
+                };
+
+                setStocks(prev => [...prev, stock]);
+                setNewStock({ name: '', amount: '', type: 'stable' });
+            };
+
+            const removeStock = (id) => {
+                setStocks(prev => prev.filter(stock => stock.id !== id));
+            };
+
+            const generateCharts = () => {
+                if (stocks.length === 0) {
+                    alert('Please add some stocks first');
+                    return;
+                }
+
+                setTimeout(() => {
+                    createCharts();
+                }, 100);
+            };
+
+            const createCharts = () => {
+                const stableStocks = stocks.filter(s => s.type === 'stable');
+                const advanceStocks = stocks.filter(s => s.type === 'advance');
+                const cashStocks = stocks.filter(s => s.type === 'cash');
+
+                // Type Distribution Chart
+                const typeCtx = chartRefs.typeDistribution.current?.getContext('2d');
+                if (typeCtx && window.typeChart) window.typeChart.destroy();
+                if (typeCtx) {
+                    const stableTotal = stableStocks.reduce((sum, s) => sum + s.amount, 0);
+                    const advanceTotal = advanceStocks.reduce((sum, s) => sum + s.amount, 0);
+                    const cashTotal = cashStocks.reduce((sum, s) => sum + s.amount, 0);
+                    const total = stableTotal + advanceTotal + cashTotal;
+                    
+                    window.typeChart = new Chart(typeCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: [
+                                `Stable (${stableTotal > 0 ? Math.round((stableTotal/total)*100) : 0}%)`,
+                                `Advance (${advanceTotal > 0 ? Math.round((advanceTotal/total)*100) : 0}%)`,
+                                `Cash (${cashTotal > 0 ? Math.round((cashTotal/total)*100) : 0}%)`
+                            ],
+                            datasets: [{
+                                data: [stableTotal, advanceTotal, cashTotal],
+                                backgroundColor: ['#43e97b', '#fa709a', '#a8edea'],
+                                borderWidth: 2,
+                                borderColor: '#ffffff'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Investment by Type'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed;
+                                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                            const percentage = total > 0 ? Math.round((value/total)*100) : 0;
+                                            return `${context.label}: $${value.toLocaleString()} (${percentage}%)`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Stable Stocks Distribution
+                const stableCtx = chartRefs.stableDistribution.current?.getContext('2d');
+                if (stableCtx && window.stableChart) window.stableChart.destroy();
+                if (stableCtx && stableStocks.length > 0) {
+                    const stableTotal = stableStocks.reduce((sum, s) => sum + s.amount, 0);
+                    
+                    window.stableChart = new Chart(stableCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: stableStocks.map(s => 
+                                `${s.name} (${Math.round((s.amount/stableTotal)*100)}%)`
+                            ),
+                            datasets: [{
+                                data: stableStocks.map(s => s.amount),
+                                backgroundColor: ['#43e97b', '#38f9d7', '#4facfe', '#00f2fe', '#a8edea'],
+                                borderWidth: 2,
+                                borderColor: '#ffffff'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Stable Stocks Breakdown'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed;
+                                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                            const percentage = total > 0 ? Math.round((value/total)*100) : 0;
+                                            return `${context.label}: $${value.toLocaleString()} (${percentage}%)`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Advance Stocks Distribution
+                const advanceCtx = chartRefs.advanceDistribution.current?.getContext('2d');
+                if (advanceCtx && window.advanceChart) window.advanceChart.destroy();
+                if (advanceCtx && advanceStocks.length > 0) {
+                    const advanceTotal = advanceStocks.reduce((sum, s) => sum + s.amount, 0);
+                    
+                    window.advanceChart = new Chart(advanceCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: advanceStocks.map(s => 
+                                `${s.name} (${Math.round((s.amount/advanceTotal)*100)}%)`
+                            ),
+                            datasets: [{
+                                data: advanceStocks.map(s => s.amount),
+                                backgroundColor: ['#fa709a', '#fee140', '#ff6b6b', '#ffa726', '#ffd93d'],
+                                borderWidth: 2,
+                                borderColor: '#ffffff'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Advance Stocks Breakdown'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed;
+                                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                            const percentage = total > 0 ? Math.round((value/total)*100) : 0;
+                                            return `${context.label}: $${value.toLocaleString()} (${percentage}%)`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Cash Distribution
+                const cashCtx = chartRefs.cashDistribution.current?.getContext('2d');
+                if (cashCtx && window.cashChart) window.cashChart.destroy();
+                if (cashCtx && cashStocks.length > 0) {
+                    const cashTotal = cashStocks.reduce((sum, s) => sum + s.amount, 0);
+                    
+                    window.cashChart = new Chart(cashCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: cashStocks.map(s => 
+                                `${s.name} (${Math.round((s.amount/cashTotal)*100)}%)`
+                            ),
+                            datasets: [{
+                                data: cashStocks.map(s => s.amount),
+                                backgroundColor: ['#a8edea', '#fed6e3', '#c2e9fb', '#dfe9f3', '#f5f7fa'],
+                                borderWidth: 2,
+                                borderColor: '#ffffff'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Cash Breakdown'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed;
+                                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                            const percentage = total > 0 ? Math.round((value/total)*100) : 0;
+                                            return `${context.label}: $${value.toLocaleString()} (${percentage}%)`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Total Overview Chart
+                const totalCtx = chartRefs.totalOverview.current?.getContext('2d');
+                if (totalCtx && window.totalChart) window.totalChart.destroy();
+                if (totalCtx) {
+                    const totalAmount = stocks.reduce((sum, s) => sum + s.amount, 0);
+                    
+                    window.totalChart = new Chart(totalCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: stocks.map(s => 
+                                `${s.name} (${Math.round((s.amount/totalAmount)*100)}%)`
+                            ),
+                            datasets: [{
+                                data: stocks.map(s => s.amount),
+                                backgroundColor: stocks.map(s => {
+                                    if (s.type === 'stable') return '#43e97b';
+                                    if (s.type === 'advance') return '#fa709a';
+                                    return '#a8edea';
+                                }),
+                                borderWidth: 2,
+                                borderColor: '#ffffff'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Total Portfolio Overview'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed;
+                                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                            const percentage = total > 0 ? Math.round((value/total)*100) : 0;
+                                            return `${context.label}: $${value.toLocaleString()} (${percentage}%)`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            };
+
+            const totalInvestment = stocks.reduce((sum, s) => sum + s.amount, 0);
+            const stableTotal = stocks.filter(s => s.type === 'stable').reduce((sum, s) => sum + s.amount, 0);
+            const advanceTotal = stocks.filter(s => s.type === 'advance').reduce((sum, s) => sum + s.amount, 0);
+            const cashTotal = stocks.filter(s => s.type === 'cash').reduce((sum, s) => sum + s.amount, 0);
+            const stablePercentage = totalInvestment > 0 ? Math.round((stableTotal/totalInvestment)*100) : 0;
+            const advancePercentage = totalInvestment > 0 ? Math.round((advanceTotal/totalInvestment)*100) : 0;
+            const cashPercentage = totalInvestment > 0 ? Math.round((cashTotal/totalInvestment)*100) : 0;
+
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1>💰 Finance Tracker</h1>
+                        <p>Track and analyze your stock investments monthly</p>
+                    </div>
+
+                    <div className="main-content">
+                        <div className="input-section">
+                            <h2 style={{marginBottom: '20px', color: '#2d3748'}}>Add New Stock</h2>
+                            <div className="stock-form">
+                                <div className="form-group">
+                                    <label>Stock Name</label>
+                                    <input
+                                        type="text"
+                                        value={newStock.name}
+                                        onChange={(e) => handleInputChange('name', e.target.value)}
+                                        placeholder="e.g., Apple Inc. or Cash Reserve"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Amount ($)</label>
+                                    <input
+                                        type="number"
+                                        value={newStock.amount}
+                                        onChange={(e) => handleInputChange('amount', e.target.value)}
+                                        placeholder="e.g., 5000"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Type</label>
+                                    <select
+                                        value={newStock.type}
+                                        onChange={(e) => handleInputChange('type', e.target.value)}
+                                    >
+                                        <option value="stable">Stable</option>
+                                        <option value="advance">Advance</option>
+                                        <option value="cash">Cash</option>
+                                    </select>
+                                </div>
+                                <button className="btn btn-primary" onClick={addStock}>
+                                            ➕ Add Stock
+                                </button>
+                            </div>
+
+                            <div className="stats-summary">
+                                <div className="stat-card" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
+                                    <div className="stat-label">Total Stocks</div>
+                                    <div className="stat-value">{stocks.length}</div>
+                                </div>
+                                <div className="stat-card" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}>
+                                    <div className="stat-label">Total Investment</div>
+                                    <div className="stat-value">${totalInvestment.toLocaleString()}</div>
+                                </div>
+                                <div className="stat-card" style={{background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'}}>
+                                    <div className="stat-label">Stable Investment</div>
+                                    <div className="stat-value">${stableTotal.toLocaleString()} ({stablePercentage}%)</div>
+                                </div>
+                                <div className="stat-card" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}>
+                                    <div className="stat-label">Advance Investment</div>
+                                    <div className="stat-value">${advanceTotal.toLocaleString()} ({advancePercentage}%)</div>
+                                </div>
+                                <div className="stat-card" style={{background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'}}>
+                                    <div className="stat-label">Cash Reserve</div>
+                                    <div className="stat-value">${cashTotal.toLocaleString()} ({cashPercentage}%)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {stocks.length > 0 && (
+                            <div className="input-section">
+                                <h2 style={{marginBottom: '20px', color: '#2d3748'}}>Your Stocks</h2>
+                                <div className="stocks-list">
+                                    {stocks.map(stock => (
+                                        <div key={stock.id} className={`stock-item ${stock.type}`}>
+                                            <div className="stock-name">{stock.name}</div>
+                                            <div className="stock-amount">${stock.amount.toLocaleString()}</div>
+                                            <div className={`stock-type ${stock.type}`}>
+                                                {stock.type}
+                                            </div>
+                                            <button 
+                                                className={`btn ${stock.type === 'cash' ? 'btn-cash' : 'btn-danger'}`}
+                                                onClick={() => removeStock(stock.id)}
+                                            >
+                                                🗑️ Remove
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="input-section">
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px'}}>
+                                <h2 style={{color: '#2d3748'}}>Investment Analytics</h2>
+                                <button className="btn btn-success" onClick={generateCharts}>
+                                    📊 Generate Charts
+                                </button>
+                            </div>
+
+                            <div className="charts-section">
+                                <div className="chart-container">
+                                    <div className="chart-title">Investment by Type</div>
+                                    <canvas ref={chartRefs.typeDistribution} height="250"></canvas>
+                                </div>
+                                <div className="chart-container">
+                                    <div className="chart-title">Stable Stocks Breakdown</div>
+                                    <canvas ref={chartRefs.stableDistribution} height="250"></canvas>
+                                </div>
+                                <div className="chart-container">
+                                    <div className="chart-title">Advance Stocks Breakdown</div>
+                                    <canvas ref={chartRefs.advanceDistribution} height="250"></canvas>
+                                </div>
+                                <div className="chart-container">
+                                    <div className="chart-title">Cash Breakdown</div>
+                                    <canvas ref={chartRefs.cashDistribution} height="250"></canvas>
+                                </div>
+                                <div className="chart-container">
+                                    <div className="chart-title">Total Portfolio Overview</div>
+                                    <canvas ref={chartRefs.totalOverview} height="250"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<FinanceTracker />, document.getElementById('root'));
+    </script>
+</body>
+</html>
