@@ -105,7 +105,7 @@ const articles = {
                 "english": "When I was 17, I read a quote that went something like: \"If you live each day as if it was your last, someday you'll most certainly be right. \"It made an impression on me, and since then, for the past 33 years, I have looked in the mirror every morning and asked myself:\"If today were the last day of my life, would I want to do what I am about to do today？\"And whenever the answer has been\"No\" for too many days in a row, I know I need to change something."
             },
             {
-                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的期望、所有的荣耀、对失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，可以帮助你避开担心失去身外之物的恐惧。你已经一无所有，没有理由不去追随你的内心。",
+                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的外部的期望、所有的骄傲、对尴尬或失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，可以帮助你避开担心失去身外之物的恐惧。你已经一无所有，没有理由不去追随你的内心。",
                 "english": "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything – all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
             },
             {
