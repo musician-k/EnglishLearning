@@ -105,11 +105,11 @@ const articles = {
                 "english": "When I was 17, I read a quote that went something like: \"If you live each day as if it was your last, someday you'll most certainly be right. \"It made an impression on me, and since then, for the past 33 years, I have looked in the mirror every morning and asked myself:\"If today were the last day of my life, would I want to do what I am about to do today？\"And whenever the answer has been\"No\" for too many days in a row, I know I need to change something."
             },
             {
-                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的外部的期望、所有的骄傲、对尴尬或失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，可以帮助你避开担心失去身外之物的恐惧。你已经一无所有，没有理由不去追随你的内心。",
+                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的外部的期望、所有的骄傲、对尴尬或失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，是我所知最好的方法可以避开思考你有某些东西要失去。你已经一无所有。没有理由不去追随你的内心。",
                 "english": "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything – all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
             },
             {
-                "chinese": "大约一年前我被诊断出患有癌症。我在早晨七点半做了一次扫描，清楚显示出我的胰腺里有个肿瘤。我之前连胰腺是什么都不知道，医生告诉我，胰腺癌基本上无法治愈，我可能只剩下三到六个月的时间。医生让我回家“安排一下自己的事情“，这是医生对所有临终病人的话，这意味着对于你的孩子们，你要把未来十年的话在几个月里说完，意味着做好所有的准备，让你的家人尽可能的轻松一些，意味着跟所有人说再见。",
+                "chinese": "大约一年前我被诊断出患有癌症。我在早晨七点半做了一次扫描，清楚显示出我的胰腺里有个肿瘤。我之前连胰腺是什么都不知道。医生告诉我，这是一种基本无法治愈的癌症类型，我预计活不超过三到六个月了。医生建议我回家将自己的事情安排妥当 —— 这是医生让准备死亡的潜台词。这意味着对于你的孩子们，你要把未来十年的话在几个月里说完，意味着做好所有的准备，让你的家人尽可能的轻松一些，意味着跟所有人说再见。",
                 "english": "About a year ago I was diagnosed with cancer. I had a scan at 7:30 in the morning, and it clearly showed a tumor on my pancreas. I didn't even know what a pancreas was. The doctors told me this was almost certainly a type of cancer that is incurable, and that I should expect to live no longer than three to six months. My doctor advised me to go home and get my affairs in order, which is doctor's code for prepare to die. It means to try to tell your kids everything you thought you'd have the next 10 years to tell them in just a few months. It means to make sure everything is buttoned up so that it will be as easy as possible for your family. It means to say your goodbyes."
             },
             {
