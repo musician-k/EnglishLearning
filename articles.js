@@ -101,19 +101,19 @@ const articles = {
                 "english": "[3] My third story is about death."
             },
             {
-                "chinese": "我17岁的时候读到过这样一句话:“如果你把每一天都当作是生命的最后一天，总有一天你会是对的。” 这话给我留下了深刻的印象。在那之后，在过去的的33年里，每天早晨我都对着镜子问自己：“如果今天是我生命中的最后一天我还会想做我今天要做的这些事吗？” 每当答案连续很多天都是“不”的时候，我就知道需要改变了。",
+                "chinese": "我17岁的时候读到过这样一句话:“如果你把每一天都当作是生命的最后一天，总有一天你会是对的。” 这话给我留下了深刻的印象。在那之后，在过去的33年里，每天早晨我都对着镜子问自己：“如果今天是我生命中的最后一天我还会想做我今天要做的这些事吗？” 每当答案连续很多天都是“不”的时候，我就知道需要改变了。",
                 "english": "When I was 17, I read a quote that went something like: \"If you live each day as if it was your last, someday you'll most certainly be right. \"It made an impression on me, and since then, for the past 33 years, I have looked in the mirror every morning and asked myself:\"If today were the last day of my life, would I want to do what I am about to do today？\"And whenever the answer has been\"No\" for too many days in a row, I know I need to change something."
             },
             {
-                "chinese": "记住自己将会死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的外部的期望、所有的骄傲、对尴尬或失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，是我所知最好的方法可以避开思考你有某些东西要失去。你已经一无所有。没有理由不去追随你的内心。",
+                "chinese": "记住自己将会很快死亡是我遇到的最重要的工具，它帮助我做出了许多人生中的重要决定。因为几乎任何事，所有的外部的期望、所有的骄傲、对尴尬或失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。记住你将会死去，是我所知最好的方法可以避开掉入思考你有某些东西要失去的陷阱。你已经一无所有。没有理由不去追随你的内心。",
                 "english": "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything – all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
             },
             {
-                "chinese": "大约一年前我被诊断出患有癌症。我在早晨七点半做了一次扫描，清楚显示出我的胰腺里有个肿瘤。我之前连胰腺是什么都不知道。医生告诉我，这是一种基本无法治愈的癌症类型，我预计活不超过三到六个月了。医生建议我回家将自己的事情安排妥当 —— 这是医生让准备死亡的潜台词。这意味着对于你的孩子们，你要把未来十年的话在几个月里说完，意味着做好所有的准备，让你的家人尽可能的轻松一些，意味着跟所有人说再见。",
+                "chinese": "大约一年前我被诊断出患有癌症。我在早晨七点半做了一次扫描，清楚显示出我的胰腺里有个肿瘤。我之前连胰腺是什么都不知道。医生告诉我，这是一种基本无法治愈的癌症类型，我预计活不超过三到六个月了。医生建议我回家将自己的事情安排妥当 —— 这是医生让准备死亡的潜台词。这意味着去尝试在仅仅几个月内，告诉你的孩子们所有你原以为会有下一个10年去告诉他们的事情；它意味着去确保一切事情都安排妥当/扣好，以便让你的家人尽可能轻松；它意味着去说再见。",
                 "english": "About a year ago I was diagnosed with cancer. I had a scan at 7:30 in the morning, and it clearly showed a tumor on my pancreas. I didn't even know what a pancreas was. The doctors told me this was almost certainly a type of cancer that is incurable, and that I should expect to live no longer than three to six months. My doctor advised me to go home and get my affairs in order, which is doctor's code for prepare to die. It means to try to tell your kids everything you thought you'd have the next 10 years to tell them in just a few months. It means to make sure everything is buttoned up so that it will be as easy as possible for your family. It means to say your goodbyes."
             },
             {
-                "chinese": "我一整天都在想着这个诊断，那天傍晚我做了一个活体检查，医生将一个内窥镜伸进喉咙，通过我的胃进入肠道，用一根针在我的肿瘤上取了一些细胞，我当时是被麻醉的但妻子告诉我，当医生在显微镜下观察细胞的时候，他们喜极而泣，原来这是一种非常罕见的，可以通过手术治愈的癌症，我接受了这个手术现在我痊愈了",
+                "chinese": "我一整天都在想着这个诊断。那天晚上稍晚些时候，我做了个活检。在活检中，他们将一根内窥镜沿着我的喉咙插下去，穿过胃部，进入肠道，然后将一根针扎进我的胰腺，从肿瘤中取出了一些细胞。我当时是被麻醉的但妻子告诉我，当医生在显微镜下观察细胞的时候，他们喜极而泣，原来这是一种非常罕见的，可以通过手术治愈的癌症，我接受了这个手术现在我痊愈了",
                 "english": "I lived with that diagnosis all day. Later that evening I had a biopsy, where they stuck an endoscope down my throat, through my stomach and into my intestines, put a needle into my pancreas and got a few cells from the tumor. I was sedated, but my wife, who was there, told me that when they viewed the cells under a microscope the doctors started crying because it turned out to be a very rare form of pancreatic cancer that is curable with surgery. I had the surgery and I'm fine now."
             },
             {
