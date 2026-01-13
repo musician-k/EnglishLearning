@@ -113,12 +113,12 @@ const articles = {
                 "english": "About a year ago I was diagnosed with cancer. I had a scan at 7:30 in the morning, and it clearly showed a tumor on my pancreas. I didn't even know what a pancreas was. The doctors told me this was almost certainly a type of cancer that is incurable, and that I should expect to live no longer than three to six months. My doctor advised me to go home and get my affairs in order, which is doctor's code for prepare to die. It means to try to tell your kids everything you thought you'd have the next 10 years to tell them in just a few months. It means to make sure everything is buttoned up so that it will be as easy as possible for your family. It means to say your goodbyes."
             },
             {
-                "chinese": "我一整天都在想着这个诊断。那天晚上稍晚些时候，我做了个活检。在活检中，他们将一根内窥镜沿着我的喉咙插下去，穿过胃部，进入肠道，然后将一根针扎进我的胰腺，从肿瘤中取出了一些细胞。我当时是被麻醉的但妻子告诉我，当医生在显微镜下观察细胞的时候，他们喜极而泣，原来这是一种非常罕见的，可以通过手术治愈的癌症，我接受了这个手术现在我痊愈了",
+                "chinese": "我一整天都在想着这个诊断。那天晚上稍晚些时候，我做了个活检。在活检中，他们将一根内窥镜沿着我的喉咙插下去，穿过胃部，进入肠道，然后将一根针扎进我的胰腺，从肿瘤中取出了一些细胞。我当时被麻醉了，但在场的我妻子告诉我，当医生们在显微镜下观察那些细胞时，他们开始哭了，因为结果发现这是一种非常罕见的胰腺癌，可以通过手术治愈。我做了手术，现在好了。‌",
                 "english": "I lived with that diagnosis all day. Later that evening I had a biopsy, where they stuck an endoscope down my throat, through my stomach and into my intestines, put a needle into my pancreas and got a few cells from the tumor. I was sedated, but my wife, who was there, told me that when they viewed the cells under a microscope the doctors started crying because it turned out to be a very rare form of pancreatic cancer that is curable with surgery. I had the surgery and I'm fine now."
             },
             {
-                "chinese": "这是我最接近死亡的时刻，希望这也是未来几十年里最近的一次。与死神擦肩而过，让我更加确信一点，因为对我来说死亡不再只是一个抽象的概念。",
-                "english": "This was the closest I've been to facing death, and I hope its the closest I get for a few more decades. Having lived through it, I can now say this to you with a bit more certainty than when death was a useful but purely intellectual concept."
+                "chinese": "这是迄今为止我离面对死亡最近的一次‌，我希望在接下来的几十年里，‌这会是离死亡最近的一次‌。经历过此事，我现在可以向你们说这些话了，比起当死亡只是一个有用但纯属智识概念时，我现在能更肯定地说出这些话。",
+                "english": "This was the closest I've been to facing death, and I hope it’s the closest I get for a few more decades. Having lived through it, I can now say this to you with a bit more certainty than when death was a useful but purely intellectual concept."
             },
             {
                 "chinese": "没人愿意死，就算那些想上天堂的人也不想为此去死。但是死亡是每个人共同的终点，从来没有人能逃脱它。因为死亡就是生命最好的发明，是生命更迭的动力，它去除老旧、拥抱新生。现在你们就是新生的力量，但是用不了太久，你们会变成老旧然后被渐渐清除掉。抱歉说得夸张了点，但这都是事实。",
