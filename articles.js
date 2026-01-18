@@ -121,19 +121,19 @@ const articles = {
                 "english": "This was the closest I've been to facing death, and I hope it’s the closest I get for a few more decades. Having lived through it, I can now say this to you with a bit more certainty than when death was a useful but purely intellectual concept."
             },
             {
-                "chinese": "没人愿意死，就算那些想上天堂的人也不想为此去死。但是死亡是每个人共同的终点，从来没有人能逃脱它。因为死亡就是生命最好的发明，是生命更迭的动力，它去除老旧、拥抱新生。现在你们就是新生的力量，但是用不了太久，你们会变成老旧然后被渐渐清除掉。抱歉说得夸张了点，但这都是事实。",
+                "chinese": "没有人想死。即使那些想去天堂的人，也不想通过死亡到达那里。然而，死亡是我们所有人共享的终点。从来没有人能逃脱它。而事情本应如此，因为死亡很可能是生命‌唯一最棒的发明‌。它是生命的‌变化使者‌。它‌清除旧的，为新的让路‌。现在，这个新的就是你，但在不远的将来某一天，你将逐渐变旧，并被清除。很抱歉说得这么戏剧化，但这‌千真万确‌。",
                 "english": "No one wants to die. Even people who want to go to heaven don't want to die to get there. And yet death is the destination we all share. No one has ever escaped it. And that is as it should be, because Death is very likely the single best invention of Life. It is Life's change agent. It clears out the old to make way for the new. Right now the new is you, but someday not too long from now, you will gradually become the old and be cleared away. Sorry to be so dramatic, but it is quite true."
             },
             {
-                "chinese": "光阴如梭，所以，不要浪费时间过你不想要的生活，不要被教条束缚，那意味着按照别人的想法生活，不要被世人的喧嚣掩盖了你的心声，还有最重要的，要有跟随你的内心和直觉的勇气，它们知道你想做一个什么样的人，其他的一切都是次要的。",
+                "chinese": "你的时间是有限的，所以不要浪费时间过别人的生活。不要被教条束缚——那意味着活在他人思考的结果中。不要让别人的意见噪音淹没你自己内心的声音。而最重要的是，要有勇气追随你的内心和直觉。它们在某种程度上已经知道你真正想要成为什么。其他一切都是次要的。",
                 "english": "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of other's opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary."
             },
             {
-                "chinese": "当我年轻的时候，有一本非常棒的杂志叫《全球概览》，它是我们那一代人的圣经之一。它的创办人叫 Stewart Brand，就在离这不远的 Menlo Park，他以艺术般的手法为刊物注入了生命。那是60年代末，早在在个人电脑出现以前，所以这本书完全是用打字机、剪刀还有老相机制作的，它就像书籍版的 Google，在 Google 出现的35年之前，它充斥着理想的色彩、简洁的工具和伟大的想法。",
+                "chinese": "当我年轻时，有一本了不起的出版物叫《全球概览》，它是我那一代人的圣经之一。它由一个叫斯图尔特·布兰德的人在离这里不远的门洛帕克创办，他用诗意的触觉赋予了它生命。那是在1960年代末，在个人电脑和桌面出版出现之前，所以它完全是用打字机、剪刀和宝丽来相机制作的。它有点像平装本形式的谷歌，比谷歌诞生早了35年：它充满理想主义，并且漫溢着精巧的工具和伟大的理念。",
                 "english": "When I was young, there was an amazing publication called The Whole Earth Catalog, which was one of the bibles of my generation. It was created by a fellow named Stewart Brand not far from here in Menlo Park, and he brought it to life with his poetic touch. This was in the late 1960's, before personal computers and desktop publishing, so it was all made with typewriters, scissors, and polaroid cameras. It was sort of like Google in paperback form, 35 years before Google came along: it was idealistic, and overflowing with neat tools and great notions."
             },
             {
-                "chinese": "Stewart 和他的伙伴出版了几期的《全球概览》，当它完成了自己使命的时候，他们出版了最后的一期。那是70年代中期，我正是你们现在的年纪，最后一期的封底上，是一幅清晨乡村公路的照片，是那种你去搭便车旅行就会看到的景色，照片下面有一句话“Stay Hungry. Stay Foolish.”这是他们停刊的告别语，“Stay Hungry. Stay Foolish.”。我总是以此自勉，在你们即将展开新的旅程之时，我将这句话也赠予你们，“Stay Hungry. Stay Foolish.”。",
+                "chinese": "斯图尔特和他的团队出版了几期《全球概览》，当它完成使命后，他们推出了最终刊。那是1970年代中期，我当时正是你们现在的年纪。最终刊的封底是清晨乡间道路的照片——那种你若有冒险精神可能会搭便车的路。下方印着：\"保持饥饿，保持愚蠢。\" 这是他们停刊时的告别赠言。保持饥饿，保持愚蠢。我一直以此自勉。现在当你们毕业重新启程，我也这样祝愿你们。",
                 "english": "Stewart and his team put out several issues of The Whole Earth Catalog, and then when it had run its course, they put out a final issue. It was the mid-1970s, and I was your age. On the back cover of their final issue was a photograph of an early morning country road, the kind you might find yourself hitchhiking on if you were so adventurous. Beneath it were the words: \"Stay Hungry. Stay Foolish.\" It was their farewell message as they signed off. Stay Hungry. Stay Foolish. And I have always wished that for myself. And now, as you graduate to begin anew, I wish that for you."
             },
             {
